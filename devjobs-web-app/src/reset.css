@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--ff-base);
+  font-family: var(--ff-family);
+  color: var(--body-text-color);
+  background-color: var(--body-bg-color);
+}
+
+/* 2 - Typography */
+h1 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* svgs */
+svg {
+  flex-shrink: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  /* 2 - Typography */
+  h1 {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}

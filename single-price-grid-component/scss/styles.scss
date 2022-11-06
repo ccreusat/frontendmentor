@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+//Colors
+
+/////// I often name my colors with https://coolors.co/ !
+/////// When color's name is more than 3 words, I limit it to one (eg: Cadet Blue Crayola > Crayola)
+
+///Primary
+
+$verdigris: hsl(179, 62%, 43%);
+$bitter-lemon: hsl(71, 73%, 54%);
+$bitter-lemon-darker: hsl(71, 73%, 50%);
+
+///Neutral
+
+$alice-blue: hsl(204, 43%, 93%);
+$crayola: hsl(218, 22%, 67%);
+$white: hsl(0, 0%, 100%);
+
+//Variables
+$font-base: 16px;
+$font-family: "Karla", sans-serif;
+
+//Mixins
+
+@mixin colors($title, $headline, $text) {
+	.card__title {
+		color: $title;
+	}
+
+	.card__headline {
+		color: $headline;
+	}
+
+	.card__text {
+		color: $text;
+	}
+}
+
+//Base
+
+body {
+	margin: 0;
+	font-size: $font-base;
+	font-family: $font-family;
+	background-color: $alice-blue;
+
+	@media only screen and (min-width: 55em) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+h2 {
+	margin-bottom: 1em;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	line-height: 1.3;
+}
+
+a {
+	text-decoration: none;
+}
+
+//Card
+.card {
+	& {
+		overflow: hidden;
+		margin: 1.875em;
+		border-radius: 0.31em;
+		box-shadow: 0 0.5em 0.5em 0.1em rgba($color: #000000, $alpha: 0.05);
+	}
+	& > section {
+		padding: 1.56em;
+	}
+
+	&__title {
+		font-size: 1.25em;
+	}
+
+	&__text {
+		font-size: 0.875em;
+		line-height: 1.8em;
+	}
+
+	&__button {
+		display: block;
+		padding: 1em;
+		color: $white;
+		text-align: center;
+		border-radius: 0.31em;
+		background-color: $bitter-lemon;
+		box-shadow: 0 0 0.8em 0.1em rgba($color: #000000, $alpha: 0.05);
+
+		&:hover {
+			background-color: rgba($color: #fff, $alpha: 0.2);
+			transition: color 0.5s ease-in-out, background 0.4s ease-in-out;
+		}
+	}
+
+	&__column {
+		&--community {
+			background-color: $white;
+			@include colors($verdigris, $bitter-lemon, $crayola);
+
+			.card__headline {
+				margin: 1em 0;
+			}
+		}
+
+		&--subscription,
+		&--disclaimer {
+			.card__title {
+				font-size: 1.125em;
+				letter-spacing: -0.04em;
+			}
+		}
+
+		&--subscription {
+			background-color: $verdigris;
+			@include colors($alice-blue, $alice-blue, $alice-blue);
+
+			.card__headline {
+				font-size: 2em;
+
+				small {
+					font-size: 0.43em;
+					letter-spacing: 1px;
+				}
+			}
+
+			.card__text {
+				font-size: 1em;
+			}
+		}
+
+		&--disclaimer {
+			background-color: hsl(179, 47%, 52%);
+
+			.card__title {
+				color: $alice-blue;
+			}
+
+			.card__link {
+				color: rgba($color: #fff, $alpha: 0.8);
+				font-size: 0.875em;
+			}
+		}
+	}
+	@media only screen and (max-width: 54em) {
+		.letter-spacing {
+			letter-spacing: -0.03em;
+		}
+
+		&__title,
+		&__headline,
+		&__text {
+			@extend .letter-spacing;
+		}
+	}
+	@media only screen and (min-width: 55em) {
+		& {
+			max-width: 635px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		& > section {
+			padding: 2.4em 2.4em 1.875em;
+		}
+		&__column {
+			&--community {
+				grid-area: 1 / 1 / span 1 / span 3;
+
+				.card__title {
+					font-size: 1.5em;
+				}
+			}
+
+			&--subscription,
+			&--disclaimer {
+				.card__title {
+					font-size: 1.125em;
+				}
+			}
+
+			&--subscription {
+				.card__text {
+					margin-top: 0.5em;
+					margin-bottom: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@media only screen and (min-width: 55em) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: $verdigris;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

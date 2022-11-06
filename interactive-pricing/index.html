@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.min.css" />
+
+		<title>Frontend Mentor | Interactive pricing component</title>
+	</head>
+	<body>
+		<div id="app">
+			<header class="header">
+				<h1 class="header__heading">Simple, traffic-based pricing</h1>
+				<p class="header__text">
+					Sign-up for our 30-day trial. No credit card required.
+				</p>
+			</header>
+
+			<form class="interactive">
+				<div class="interactive__body">
+					<div class="interactive__views">
+						<strong
+							><span class="views js-views">10K</span>
+							Pageviews</strong
+						>
+					</div>
+
+					<div class="interactive__price">
+						<strong class="js-price">$16.00</strong
+						><small> / month</small>
+					</div>
+
+					<label for="slider-range" class="progress-bar">
+						<span class="js-progress" style="width: 10%"></span>
+						<input
+							id="slider-range"
+							title="price choice"
+							aria-label="price choice"
+							name="slider-range"
+							class="interactive__slider js-slider"
+							type="range"
+							min="1"
+							max="5"
+							step="1"
+							value="3"
+						/>
+					</label>
+
+					<div class="interactive__billing">
+						<label for="billing">
+							Monthly Billing
+							<input
+								type="checkbox"
+								id="billing"
+								name="billing"
+							/>
+							<span class="checkbox"></span>
+							Yearly Billing
+							<span class="badge"
+								>-25% <span>discount</span></span
+							>
+						</label>
+					</div>
+				</div>
+
+				<div class="interactive__footer">
+					<ul class="interactive__list">
+						<li class="interactive__item">Unlimited websites</li>
+						<li class="interactive__item">100% data ownership</li>
+						<li class="interactive__item">Email reports</li>
+					</ul>
+
+					<button type="submit" class="button">Start my trial</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://github.com/ccreusat">Clement Creusat</a>.
+		</div>
+		<script src="interactive-range.js"></script>
+		<script>
+			window.addEventListener("DOMContentLoaded", interactiveRange());
+		</script>
+	</body>
+</html>

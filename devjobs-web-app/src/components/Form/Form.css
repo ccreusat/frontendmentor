@@ -1,0 +1,124 @@
+/* 3 - Forms */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  border-radius: 0.6rem;
+  background-color: var(--color-theme);
+}
+
+form.container {
+  padding: 0;
+}
+
+fieldset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  gap: 1.6rem;
+}
+
+fieldset > label {
+  padding: 2.4rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+fieldset > label strong {
+  white-space: nowrap;
+  color: var(--color-theme-invert);
+}
+
+fieldset:not(:first-child) {
+  border-top: 1px solid hsla(var(--grey-700), 20%);
+}
+
+fieldset:last-child {
+  align-items: center;
+  justify-content: space-between;
+  display: block;
+  padding: 1.6rem 2.4rem;
+}
+
+fieldset:last-child > label {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+label,
+input {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  color: var(--color-theme-invert);
+  caret-color: var(--color-theme-invert);
+  text-overflow: ellipsis;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 2.4rem;
+  height: 2.4rem;
+  accent-color: hsla(var(--midnight-400), 10%);
+}
+
+input[type="checkbox"]:hover {
+  accent-color: hsla(var(--violet-400), 25%);
+}
+
+input[type="checkbox"]:checked {
+  accent-color: hsl(var(--violet-400));
+}
+
+@media only screen and (max-width: 699px) {
+  form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  form {
+    flex-wrap: nowrap;
+  }
+
+  fieldset:not(:first-child) {
+    border-top: 0;
+    border-left: 1px solid hsla(var(--grey-700), 20%);
+  }
+  fieldset:last-child {
+    display: inline-flex;
+    padding-right: 1.6rem;
+  }
+
+  fieldset:last-child > label {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1109px) {
+  form button:not(.button-with-icon) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1109px) {
+  fieldset > label {
+    padding: 2.4rem 3.2rem;
+  }
+}

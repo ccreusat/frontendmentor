@@ -1,0 +1,52 @@
+@import "../mixins/flex";
+.footer {
+	padding: 5.55rem var(--padding-24);
+
+	h2 {
+		+ .button {
+			margin-top: 2.66rem;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		& {
+			padding: 3.88rem 2.22rem;
+			clear: both;
+		}
+
+		.container {
+			@include flex();
+		}
+
+		.button {
+			flex-basis: 170px;
+		}
+	}
+
+	@media only screen and (min-width: 1110px) {
+		overflow: hidden;
+		position: relative;
+		padding: 6.66rem 0;
+
+		.container {
+			@include flex();
+		}
+
+		.button {
+			flex-basis: 20%;
+		}
+	}
+
+	@media only screen and (min-width: 1300px) {
+		&::before {
+			content: "";
+			position: absolute;
+			left: -4rem;
+			top: 40%;
+			width: 135px;
+			height: 61px;
+			background-image: url(../../assets/desktop/bg-pattern-wave-red.svg);
+			background-repeat: no-repeat;
+		}
+	}
+}

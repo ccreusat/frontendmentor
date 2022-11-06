@@ -1,0 +1,16 @@
+.hero {
+    margin: 2.4rem;
+
+    @media (min-width: 76.8em) and (max-width: 1000px) {
+        margin: 2.4rem 4rem;
+        max-width: 520px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 70%;
+    }
+
+    @media (min-width: 1000px) {
+        max-width: 80%;
+    }
+}

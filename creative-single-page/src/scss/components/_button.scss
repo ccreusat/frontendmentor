@@ -1,0 +1,40 @@
+@import "../mixins/pxToRem";
+
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 25px 34px;
+	font-weight: 800;
+	color: var(--color-white);
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	@include pxToRem("font-size", 18);
+
+	&--smaller {
+		padding: 16px 44px;
+
+		@media only screen and (min-width: 768px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@media only screen and (min-width: 1110px) {
+			padding: 16px 44px;
+		}
+	}
+
+	&--primary {
+		background-color: var(--color-red);
+
+		&:hover {
+			background-color: var(--color-button-primary-hover);
+		}
+	}
+
+	&--secondary {
+		background-color: var(--color-bg-black);
+
+		&:hover {
+			background-color: var(--color-button-secondary-hover);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.header {
+    padding: 4rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        cursor: pointer;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}

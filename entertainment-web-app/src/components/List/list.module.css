@@ -1,0 +1,84 @@
+.list {
+  --list-padding: var(--spacing-300, 1rem);
+  --list-columns: repeat(2, 1fr);
+  margin: var(--list-padding) 0;
+  gap: var(--spacing-300, 1rem);
+  grid-template-columns: var(--list-columns);
+}
+
+.trending-list {
+  --gap: var(--spacing-300);
+  display: flex;
+  padding-block: var(--spacing-500);
+  gap: var(--gap);
+  overflow-x: scroll;
+}
+
+.trending-list > article {
+  padding: var(--spacing-300, 1rem);
+  min-height: 140px;
+  border-radius: 0.8rem;
+  background-color: lightgrey;
+  padding: 0;
+  overflow: hidden;
+}
+
+.trending-list > article > footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: var(--spacing-300, 1rem);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.trending-list > article img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.trending-list .card__info > span {
+  font-size: 1.2rem;
+}
+
+.trending-list .card__title {
+  font-size: 1.5rem;
+}
+
+.trending-list > article {
+  width: 24rem;
+  min-width: 24rem;
+}
+
+@media (min-width: 40em) {
+  .list {
+    --list-padding: var(--spacing-500);
+    --list-columns: repeat(3, 1fr);
+  }
+
+  .trending-list > article {
+    width: 47rem;
+    min-width: 47rem;
+  }
+
+  .trending-list {
+    --gap: var(--spacing-500);
+  }
+}
+
+@media (min-width: 70em) {
+  .list {
+    --list-columns: repeat(4, 1fr);
+  }
+
+  .trending-list {
+    max-width: 90vw;
+  }
+}

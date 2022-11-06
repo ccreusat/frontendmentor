@@ -1,0 +1,3 @@
+@mixin pxToEm($px, $base: 15) {
+	font-size: ($px / $base) + 0em;
+}

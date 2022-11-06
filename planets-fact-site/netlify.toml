@@ -1,0 +1,4 @@
+[build]
+ base    = "planets-fact-site"
+ publish = "dist/"
+ command = "npm run build"

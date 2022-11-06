@@ -1,0 +1,53 @@
+.sr-only {
+  display: none;
+}
+.auth-wrapper {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  width: 40rem;
+  border-radius: 2rem;
+  background-color: hsla(223, 36%, 13%, 1);
+}
+
+.auth h1 {
+  line-height: 4rem;
+  color: var(--color-white);
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.auth input[type="text"],
+.auth input[type="email"],
+.auth input[type="password"] {
+  padding: 1.6rem 1.8rem;
+  width: 100%;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-greyish-blue);
+}
+.auth input[type="text"]::placeholder,
+.auth input[type="email"]::placeholder,
+.auth input[type="password"]::placeholder {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 1.5rem;
+}
+.auth input[type="text"]:focus,
+.auth input[type="email"]:focus,
+.auth input[type="password"]:focus {
+  outline: none;
+  border-bottom-color: var(--color-white);
+}

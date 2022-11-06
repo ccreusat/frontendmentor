@@ -1,0 +1,161 @@
+.slider {
+  position: relative;
+  clear: both;
+}
+
+.slider-image-inner,
+.slider-content-inner {
+  position: relative;
+}
+
+.slider-image-inner {
+  height: 100%;
+  top: 0;
+}
+
+.slider-content-inner {
+  display: flex;
+  left: 0;
+}
+
+.slider-content-wrapper {
+  overflow: hidden;
+}
+
+.slider-content,
+.slider-image {
+  position: relative;
+}
+
+.slider-content {
+  height: 15.11rem;
+  background-color: #191921;
+}
+.slider-content .content {
+  padding: 3.55rem 1.33rem;
+}
+.slider-content h2 {
+  color: #fff;
+}
+
+.slider-image {
+  overflow: hidden;
+  height: 22.44rem;
+}
+
+.slide,
+.content {
+  flex: 1;
+  flex-basis: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+}
+
+.slider-arrows {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  bottom: 4rem;
+}
+.slider-arrows > div {
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: 2.22rem;
+  height: 2.22rem;
+  text-align: center;
+  background-color: var(--clr-black);
+}
+.slider-arrows > div:not(:first-child) {
+  margin-left: 0.88rem;
+}
+
+.slide-credit {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  text-align: right;
+}
+.slide-credit h3,
+.slide-credit p {
+  color: var(--color-white);
+}
+.slide-credit p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .slider-content {
+    width: 51%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0px;
+    height: 19.44rem;
+  }
+  .slider-content::before {
+    content: "";
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    width: 62px;
+    height: 28px;
+    background-image: url(./assets/desktop/bg-pattern-wavy-white.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%);
+  }
+  .slider-content .content {
+    padding: 5.55rem 1.33rem;
+  }
+
+  .slider-image {
+    float: right;
+    width: 57%;
+  }
+
+  .slider-arrows {
+    bottom: 6rem;
+  }
+
+  .slide-credit {
+    bottom: 4rem;
+    right: 4rem;
+  }
+}
+@media only screen and (min-width: 1110px) {
+  .slider-content {
+    height: 29.33rem;
+  }
+  .slider-content::before {
+    width: 134px;
+    height: 60px;
+  }
+  .slider-content .content {
+    padding: 7.77rem 0 7.77rem 5rem;
+    height: 100%;
+  }
+
+  .slider-image {
+    height: 40.44rem;
+    width: 60%;
+  }
+
+  .slider-arrows {
+    bottom: 9rem;
+    left: 5rem;
+  }
+}
+.transitionLeft {
+  transition: left 1s ease-in-out;
+}
+
+.transitionTop {
+  transition: top 1s ease-in-out;
+}
+
+/*# sourceMappingURL=slider.css.map */

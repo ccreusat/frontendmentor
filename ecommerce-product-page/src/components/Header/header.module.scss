@@ -1,0 +1,37 @@
+.header {
+    --gap: 5.6rem;
+    position: relative;
+    padding: 1.8rem 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    border-bottom: 1px solid var(--clr-light-grayish-blue);
+
+    @media (min-width: 72rem) {
+        padding: 0;
+        margin-bottom: 9rem;
+    }
+
+    &__menu {
+        @media (hover:hover) {
+            cursor: pointer;
+        }
+
+        @media (min-width: 72rem) {
+            display: none;
+        }
+    }
+
+    &__right {
+        --gap: 4rem;
+        display: inline-flex;
+        gap: var(--gap);
+        align-items: center;
+
+        @media (max-width: 71rem) {
+            --gap: 1rem;
+        }
+    }
+}

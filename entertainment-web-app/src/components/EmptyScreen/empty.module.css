@@ -1,0 +1,29 @@
+.empty-screen {
+  flex: 1;
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
+}
+
+.empty-screen > svg {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 40em) {
+  .empty-screen > svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 70em) {
+  .empty-screen > svg {
+    width: 100px;
+    height: 100px;
+  }
+}

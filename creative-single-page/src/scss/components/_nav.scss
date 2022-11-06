@@ -1,0 +1,62 @@
+@import "../mixins/pxToRem";
+@import "../mixins/flex";
+
+.nav {
+	display: none;
+
+	&__link {
+		display: block;
+		color: var(--color-white);
+		@include pxToRem("font-size", 18);
+
+		&:hover {
+			font-weight: 700;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		& {
+			padding: 30px;
+			position: absolute;
+			z-index: 2;
+			top: 100%;
+			right: 1.5rem;
+			width: 250px;
+			height: 290px;
+			text-align: center;
+			background-color: var(--color-bg-black);
+		}
+
+		.button--smaller {
+			padding: 16px 24px;
+		}
+
+		& > *:not(:first-child) {
+			margin-top: 24px;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		& {
+			@include flex();
+		}
+
+		& > * {
+			&:not(:first-child) {
+				margin-left: 32px;
+			}
+		}
+
+		&__link {
+			@include pxToRem("font-size", 16);
+		}
+
+		.button {
+			background-color: var(--color-bg-black);
+
+			&:hover {
+				background-color: var(--color-button-secondary-hover);
+			}
+		}
+	}
+}

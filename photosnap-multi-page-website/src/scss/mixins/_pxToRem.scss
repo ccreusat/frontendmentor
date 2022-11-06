@@ -1,0 +1,3 @@
+@mixin pxToRem($property, $value, $base: 15) {
+    #{$property}: ($value / $base) + rem;
+}

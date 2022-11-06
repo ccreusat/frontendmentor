@@ -1,0 +1,4 @@
+[build]
+ base    = "devjobs-web-app"
+ publish = "dist/"
+ command = "npm run build"

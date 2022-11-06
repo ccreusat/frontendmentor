@@ -1,0 +1,81 @@
+@import "../mixins/flex";
+
+.page-hero {
+	.container {
+		height: 100%;
+	}
+
+	&__banner {
+		height: 200px;
+		background-image: url(../../../assets/mobile/image-hero.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0 0;
+	}
+
+	&__content {
+		padding: 3.11rem var(--padding-24) 5rem;
+	}
+
+	@media only screen and (min-width: 480px) {
+		& {
+			height: 606px;
+		}
+
+		.container {
+			position: relative;
+			display: block;
+			margin: auto 0 auto auto;
+		}
+
+		&__banner {
+			float: right;
+			width: 438px;
+			height: 100%;
+			background-image: url(../../../assets/tablet/image-hero.jpg);
+			background-position: right top;
+			background-size: 100%;
+		}
+
+		&__content {
+			position: absolute;
+			padding: 0;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			padding: 0 0 0 40px;
+			max-width: 62%;
+		}
+	}
+
+	@media only screen and (min-width: 1110px) {
+		.container {
+			max-width: 80%;
+		}
+
+		& {
+			height: 800px;
+		}
+
+		&__banner {
+			width: 895px;
+			height: 100%;
+			background-image: url(../../../assets/desktop/image-hero.jpg);
+			background-size: 100%;
+		}
+
+		&__content {
+			max-width: 700px;
+		}
+
+		&__text {
+			max-width: 540px;
+		}
+	}
+
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}

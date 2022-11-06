@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Stats preview card component" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.min.css" />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card__image">
+          <picture class="card__image">
+            <source
+              srcset="./images/image-header-desktop.jpg"
+              media="(min-width: 800px)"
+            />
+            <img
+              src="./images/image-header-mobile.jpg"
+              alt="Stats preview card component"
+            />
+          </picture>
+        </div>
+        <div class="card__content">
+          <h1 class="card__title white">
+            Get <strong class="card__accent">insights</strong> that help your
+            business grow.
+          </h1>
+          <p class="card__text light-white">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="card__footer">
+            <p class="card__stats light-white">
+              <strong class="white">10k+</strong> companies
+            </p>
+            <p class="card__stats light-white">
+              <strong class="white">314</strong> templates
+            </p>
+            <p class="card__stats light-white">
+              <strong class="white">12m+</strong> queries
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noreferrer"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/ccreusat">Clément Creusat</a>.
+    </div>
+  </body>
+</html>

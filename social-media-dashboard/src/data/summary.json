@@ -1,0 +1,42 @@
+[
+	{
+		"id": "1",
+		"media": "facebook",
+		"mediaPath": "./images/icon-facebook.svg",
+		"username": "@nathanf",
+		"score": "1987",
+		"number": 12,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "2",
+		"media": "twitter",
+		"mediaPath": "./images/icon-twitter.svg",
+		"username": "@nathanf",
+		"score": "1044",
+		"number": 99,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "3",
+		"media": "instagram",
+		"mediaPath": "./images/icon-instagram.svg",
+		"username": "@realnathanf",
+		"score": "11K",
+		"number": 1099,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "4",
+		"media": "youtube",
+		"mediaPath": "./images/icon-youtube.svg",
+		"username": "Nathan F.",
+		"score": "8239",
+		"number": 144,
+		"stats": "down",
+		"statsPath": "./images/icon-down.svg"
+	}
+]

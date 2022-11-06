@@ -1,0 +1,105 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.job-card {
+  padding: 1.2em 1.33em;
+  border-radius: $border-radius;
+  background-color: var(--color-white);
+  @include boxShadow();
+
+  &.featured {
+    border-left: 6px solid $color-primary;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    margin-top: -3em;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__description {
+    flex-grow: 1;
+  }
+  &__header * {
+    margin-right: 1em;
+  }
+
+  &__company {
+    color: $color-primary;
+  }
+
+  &__title {
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__footer {
+    color: var(--color-dark-cyan);
+  }
+
+  &__footer {
+    gap: 1em;
+
+    span {
+      &:not(:first-child)::before {
+        content: "•";
+        position: relative;
+        left: -0.8em;
+      }
+    }
+  }
+
+  &__tags {
+    strong {
+      padding: 0.5em;
+      @include label();
+
+      &:hover {
+        color: $color-light-cyan;
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 58.66em) {
+  .job-card {
+    &__header {
+      margin-top: 0.4em;
+    }
+    &__tags {
+      margin-top: 1em;
+      padding-top: 1em;
+      border-top: 1px solid $color-light-cyan;
+    }
+  }
+}
+@media only screen and (min-width: 58.66em) {
+  .job-card {
+    display: flex;
+    padding: 2.1em 2.5em 1.8em 1.8em;
+
+    img {
+      margin-top: 0;
+      width: 90px;
+      height: 90px;
+
+      & + .job-card__description {
+        margin-left: 2em;
+      }
+    }
+
+    &__footer {
+      gap: 1.5em;
+    }
+  }
+}

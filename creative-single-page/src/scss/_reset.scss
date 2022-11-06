@@ -1,0 +1,105 @@
+@import "../scss/mixins/pxToRem";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size-adjust: 100%;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+
+	--color-red: hsl(0, 93%, 64%);
+	--color-red-hover: hsl(0, 100%, 79%);
+	--color-bg-black: hsl(240, 14%, 11%);
+	--color-text-black: hsl(0, 0%, 0%);
+	--color-white: hsl(0, 0%, 100%);
+	--color-button-primary-hover: hsl(0, 100%, 79%);
+	--color-button-secondary-hover: hsl(240, 12%, 30%);
+
+	--padding-24: 1.33rem;
+
+	--ff-base: 18px;
+}
+
+html {
+	font-size: var(--ff-base);
+}
+
+body {
+	font-family: "Commissioner", sans-serif;
+	line-height: 32px;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 800;
+}
+
+h1 {
+	line-height: 40px;
+	@include pxToRem("font-size", 40);
+
+	@media only screen and (min-width: 768px) {
+		line-height: 56px;
+		@include pxToRem("font-size", 56);
+	}
+
+	@media only screen and (min-width: 1110px) {
+		line-height: 88px;
+		@include pxToRem("font-size", 80);
+	}
+}
+
+h2 {
+	line-height: 40px;
+	@include pxToRem("font-size", 32);
+
+	@media only screen and (min-width: 1110px) {
+		line-height: 64px;
+		@include pxToRem("font-size", 56);
+	}
+}
+
+h3 {
+	@include pxToRem("font-size", 15);
+
+	@media only screen and (min-width: 768px) {
+		@include pxToRem("font-size", 20);
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 0.833rem;
+	margin: var(--padding-24) 0 2.22rem;
+
+	@media only screen and (min-width: 1110px) {
+		margin: 2.22rem 0 2.66rem;
+		font-size: 1rem;
+	}
+}
+
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.fit-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

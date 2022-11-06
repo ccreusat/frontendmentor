@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Suite landing page</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container flex align-items-center justify-space-between">
+      <a href="/" class="logo"><img src="./assets/logo.svg" alt="logo suite landing page" /></a>
+      <a href="#" class="button secondary">Request Beta Access</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container grid">
+        <div class="hero__content">
+          <h1 class="heading-xl heading-xl-curved">
+            A <strong>super solution</strong> for your
+            <strong>business.</strong>
+          </h1>
+          <p class="body">
+            Our marketing and sales automations help you scale your outreach
+            to get more leads for your company.
+          </p>
+          <a href="#" class="button primary">Request Beta Access</a>
+        </div>
+        <div class="hero__image">
+          <picture>
+            <source media="(min-width:728px)"
+              srcset="./assets/image-hero-portrait.webp, ./assets/image-hero-portrait@2x.webp 2x">
+            <img src="./assets/image-hero-landscape.png" srcset="./assets/image-hero-landscape.webp, ./assets/image-hero-landscape@2x.webp 2x"
+              alt="hero portrait">
+          </picture>
+        </div>
+        <ul class="hero__list">
+          <li class="hero__item">
+            <strong>2K+</strong> <span>Companies</span>
+          </li>
+          <li class="hero__item">
+            <strong>8</strong> <span>Languages</span>
+          </li>
+          <li class="hero__item"><strong>1.2M</strong> <span>Leads</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="testimonial">
+      <div class="container grid">
+        <picture>
+          <source media="(min-width:728px)"
+            srcset="./assets/image-jeremy-large.webp, ./assets/image-jeremy-large@2x.webp 2x">
+          <img src="./assets/image-jeremy-small.png" srcset="./assets/image-jeremy-small.webp, ./assets/image-jeremy-small@2x.webp 2x" alt="hero portrait">
+        </picture>
+        <div class="testimonial__content">
+          <h2>It just <strong>works.</strong></h2>
+          <figure>
+            <blockquote>
+              I really like how it is an all-in-one solution that handle many
+              of the tasks that you would normally need separate tools to do
+              the same job. This thing is a miracle worker.
+            </blockquote>
+            <figcaption>JEREMY ROBINSON <cite>CMO, FYLO</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <a href="/" class="logo"><img src="./assets/logo.svg" alt="logo suite landing page" /></a>
+      <p class="copyright">Copyright - Suite</p>
+      <ul class="social-list">
+        <li><a href="#"><img src="./assets/icon-facebook.svg" alt="facebook"></a></li>
+        <li><a href="#"><img src="./assets/icon-twitter.svg" alt="twitter"></a></li>
+        <li><a href="#"><img src="./assets/icon-instagram.svg" alt="instagram"></a></li>
+      </ul>
+    </div>
+    </header>
+</body>
+
+</html>

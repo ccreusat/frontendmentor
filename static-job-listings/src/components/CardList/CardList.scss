@@ -1,0 +1,14 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.jobs-list {
+  margin: 2em 1.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @media only screen and (min-width: 58.66em) {
+    margin: 5em auto;
+    max-width: 74em;
+  }
+}

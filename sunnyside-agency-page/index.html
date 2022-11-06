@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.min.css">
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a href="#"><img src="./images/logo.svg" alt="sunnyside"></a>
+    </div>
+    <nav id="header-nav"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a
+        href="#" class="button">Contact</a>
+    </nav>
+    <button id="toggle" name="toggle" aria-label="button to display mobile menu"
+      title="button to display mobile menu" class="header__toggle"></button>
+  </header>
+  <main class="main">
+
+    <section class="hero">
+      <h1>We are creatives</h1>
+      <picture>
+        <source srcset="./images/desktop/image-header.jpg" media="(min-width: 768px)" />
+        <img src="./images/mobile/image-header.jpg" class="fit-image" alt="We are creatives" />
+      </picture>
+    </section>
+
+    <section id="about" class="about grid">
+      <div class="about__image">
+        <picture>
+          <source srcset="./images/desktop/image-transform.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-transform.jpg" class="fit-image" alt="Transform your brand" />
+        </picture>
+      </div>
+      <div class="about__content">
+        <h2>Transform your brand</h2>
+        <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
+          compelling visuals that do most of the marketing for you.</p>
+        <a class="link brand" href="#">Learn More</a>
+      </div>
+      <div class="about__image">
+        <picture>
+          <source srcset="./images/desktop/image-stand-out.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-stand-out.jpg" class="fit-image" alt="Stand out to the right audience" />
+        </picture>
+      </div>
+      <div class="about__content">
+        <h2>Stand out to the right audience</h2>
+        <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll
+          build and extend your brand in digital places. </p>
+        <a class="link audience" href="#">Learn More</a>
+      </div>
+    </section>
+
+    <section id="services" class="services grid">
+      <div class="services__item services__item--graphic">
+        <div class="services__image">
+          <picture>
+            <source srcset="./images/desktop/image-graphic-design.jpg" media="(min-width: 1110px)" />
+            <img src="./images/mobile/image-graphic-design.jpg" class="fit-image" alt="Graphic Design" />
+          </picture>
+        </div>
+        <div class="services__content">
+          <h3>Graphic Design</h3>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
+            potential clients’ attention.</a>
+        </div>
+      </div>
+      <div class="services__item services__item--photography">
+        <div class="services__image">
+          <picture>
+            <source srcset="./images/desktop/image-photography.jpg" media="(min-width: 1110px)" />
+            <img src="./images/mobile/image-photography.jpg" class="fit-image" alt="Photography" />
+          </picture>
+        </div>
+        <div class="services__content">
+          <h3>Photography</h3>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business
+            image.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h4>Client Testimonials</h4>
+
+        <ul class="testimonials__list">
+          <li class="testimonials__item">
+            <img src="./images/image-emily.jpg" class="testimonials__avatar" alt="Emily">
+            <p class="testimonials__text">We put our trust in Sunnyside and they delivered, making sure our needs were
+              met and deadlines were always hit.</p>
+            <div>
+              <strong class="testimonials__name">Emily R.</strong>
+              <span class="testimonials__job">Marketing Director</span>
+            </div>
+          </li>
+          <li class="testimonials__item">
+            <img src="./images/image-thomas.jpg" class="testimonials__avatar" alt="Thomas">
+            <p class="testimonials__text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success
+              made it a satisfying and enjoyable experience.</p>
+            <div>
+              <strong class="testimonials__name">Thomas S.</strong>
+              <span class="testimonials__job">Chief Operating Officer</span>
+            </div>
+          </li>
+          <li class="testimonials__item">
+            <img src="./images/image-jennie.jpg" class="testimonials__avatar" alt="Jennie">
+            <p class="testimonials__text">Incredible end result! Our sales increased over 400% when we worked with
+              Sunnyside. Highly recommended!</p>
+            <div>
+              <strong class="testimonials__name">Jennie F.</strong>
+              <span class="testimonials__job">Business Owner</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <div id="projects" class="projects">
+      <div class="projects__item">
+        <picture>
+          <source srcset="./images/desktop/image-gallery-milkbottles.jpg" media="(min-width: 768px)" />
+          <source srcset="./images/mobile/image-gallery-milkbottles.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-gallery-milkbottles.jpg" class="fit-image" alt="milkbottles" />
+        </picture>
+      </div>
+      <div class="projects__item">
+        <picture>
+          <source srcset="./images/desktop/image-gallery-orange.jpg" media="(min-width: 768px)" />
+          <source srcset="./images/mobile/image-gallery-orange.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-gallery-orange.jpg" class="fit-image" alt="orange" />
+        </picture>
+      </div>
+      <div class="projects__item">
+        <picture>
+          <source srcset="./images/desktop/image-gallery-cone.jpg" media="(min-width: 768px)" />
+          <source srcset="./images/mobile/image-gallery-cone.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-gallery-cone.jpg" class="fit-image" alt="cone" />
+        </picture>
+      </div>
+      <div class="projects__item">
+        <picture>
+          <source srcset="./images/desktop/image-gallery-sugar-cubes.jpg" media="(min-width: 768px)" />
+          <source srcset="./images/mobile/image-gallery-sugar-cubes.jpg" media="(min-width: 768px)" />
+          <img src="./images/mobile/image-gallery-sugar-cubes.jpg" class="fit-image" alt="sugar cubes" />
+        </picture>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="./images/logo-footer.svg" alt="sunnyside"></a>
+      </div>
+      <nav><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a>
+      </nav>
+      <div class="footer__network">
+        <a href="#" class="footer__network-link">
+          <img src="./images/icon-facebook.svg" alt="facebook">
+        </a>
+        <a href="#" class="footer__network-link">
+          <img src="./images/icon-instagram.svg" alt="instagram">
+        </a>
+        <a href="#" class="footer__network-link">
+          <img src="./images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="#" class="footer__network-link">
+          <img src="./images/icon-pinterest.svg" alt="pinterest">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const nav = document.getElementById('header-nav');
+
+    toggle.onclick = () => {
+      nav.classList.toggle('dropdown');
+    }
+  </script>
+</body>
+
+</html>

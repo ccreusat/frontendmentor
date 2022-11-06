@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GitHub user search app" />
+    <meta name="theme-color" content="#0077ff">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <title>You are offline | GitHub user search app</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+            --ff-family: "Space Mono", monospace;
+        }
+
+        :root .light {
+            --logo: hsl(220, 18%, 16%);
+            --body: hsl(227, 100%, 98%);
+            --bg: hsl(0, 0%, 100%);
+            --blue: hsl(212, 100%, 50%);
+            --error: hsl(0, 92%, 62%);
+            --username: hsl(217, 21%, 21%);
+            --text: hsl(217, 35%, 45%);
+            --text-disabled: hsla(217, 35%, 45%, 50%);
+            --grey: hsl(217, 20%, 51%);
+            --stats: hsl(227, 100%, 98%);
+
+            --btn-hover: hsl(212, 100%, 69%);
+
+            --theme: url(../assets/images/icon-moon.svg) right center no-repeat;
+        }
+
+        :root .dark {
+            --logo: hsl(0, 0%, 100%);
+            --body: hsl(220, 40%, 13%);
+            --bg: hsl(222, 41%, 20%);
+            --blue: hsl(212, 100%, 50%);
+            --error: hsl(0, 92%, 62%);
+            --username: hsl(0, 0%, 100%);
+            --text: hsl(0, 0%, 100%);
+            --text-disabled: hsla(217, 35%, 45%, 50%);
+            --grey: hsl(0, 0%, 100%);
+            --stats: hsl(220, 40%, 13%);
+
+            --btn-hover: hsl(212, 100%, 69%);
+
+            --theme: url(../assets/images/icon-sun.svg) right center no-repeat;
+        }
+
+        html,
+        body {
+            height: 100vh;
+        }
+
+        body {
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--body);
+            font-family: var(--ff-family);
+            font-size: 13px;
+            line-height: 25px;
+            -webkit-transition: background-color 1000ms linear;
+            -ms-transition: background-color 1000ms linear;
+            transition: background-color 300ms linear;
+        }
+
+        .app {
+            width: 570px;
+            margin: auto;
+        }
+
+        .text {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        button {
+            font-family: var(--ff-family);
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            color: white;
+            background-color: var(--blue);
+        }
+
+        .logo {
+            font-size: 26px;
+            color: var(--logo);
+        }
+
+        [cursor] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <main class="app">
+        <header class="app__header">
+            <strong class="logo">devfinder</strong>
+        </header>
+
+        <p class="user__text text">You are offline. Click the button below to try reloading.</p>
+        <button type="button" class="button" cursor>⤾ Reload</button>
+    </main>
+
+    <!-- Inline the page's JavaScript file. -->
+    <script>
+        // Manual reload feature.
+        document.querySelector("button").addEventListener("click", () => {
+            window.location.reload();
+        });
+
+        // Listen to changes in the network state, reload when online.
+        // This handles the case when the device is completely offline.
+        window.addEventListener("online", () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+
+</html>

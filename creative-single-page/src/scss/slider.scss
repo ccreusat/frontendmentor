@@ -1,0 +1,165 @@
+.slider {
+	position: relative;
+	clear: both;
+}
+
+.slider-image-inner,
+.slider-content-inner {
+	position: relative;
+}
+
+.slider-image-inner {
+	height: 100%;
+	top: 0;
+}
+
+.slider-content-inner {
+	display: flex;
+	left: 0;
+}
+
+.slider-content-wrapper {
+	overflow: hidden;
+}
+
+.slider-content,
+.slider-image {
+	position: relative;
+}
+
+.slider-content {
+	height: 15.11rem;
+	background-color: #191921;
+
+	.content {
+		padding: 3.55rem 1.33rem;
+	}
+	h2 {
+		color: #fff;
+	}
+}
+
+.slider-image {
+	overflow: hidden;
+	height: 22.44rem;
+}
+
+.slide,
+.content {
+	flex: 1;
+	flex-basis: 0;
+	min-width: 100%;
+	height: 100%;
+}
+
+.slide {
+	position: relative;
+}
+
+.slider-arrows {
+	position: absolute;
+	z-index: 2;
+	left: 1rem;
+	bottom: 4rem;
+
+	& > div {
+		position: relative;
+		cursor: pointer;
+		float: left;
+		width: 2.22rem;
+		height: 2.22rem;
+		text-align: center;
+		background-color: var(--clr-black);
+
+		&:not(:first-child) {
+			margin-left: 0.88rem;
+		}
+	}
+}
+
+.slide-credit {
+	position: absolute;
+	bottom: 2rem;
+	right: 2rem;
+	text-align: right;
+
+	h3,
+	p {
+		color: var(--color-white);
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.slider-content {
+		width: 51%;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0px;
+		height: 19.44rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: -2rem;
+			top: 50%;
+			width: 62px;
+			height: 28px;
+			background-image: url(./assets/desktop/bg-pattern-wavy-white.svg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			transform: translateY(-50%);
+		}
+		.content {
+			padding: 5.55rem 1.33rem;
+		}
+	}
+	.slider-image {
+		float: right;
+		width: 57%;
+	}
+	.slider-arrows {
+		bottom: 6rem;
+	}
+	.slide-credit {
+		bottom: 4rem;
+		right: 4rem;
+	}
+}
+
+@media only screen and (min-width: 1110px) {
+	.slider-content {
+		height: 29.33rem;
+
+		&::before {
+			width: 134px;
+			height: 60px;
+		}
+
+		.content {
+			padding: 7.77rem 0 7.77rem 5rem;
+			height: 100%;
+		}
+	}
+	.slider-image {
+		height: 40.44rem;
+		width: 60%;
+	}
+	.slider-arrows {
+		bottom: 9rem;
+		left: 5rem;
+	}
+}
+
+// Transitions Class CSS
+.transitionLeft {
+	transition: left 1s ease-in-out;
+}
+
+.transitionTop {
+	transition: top 1s ease-in-out;
+}

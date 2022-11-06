@@ -1,0 +1,3 @@
+[build]
+ base    = "profile-card-component"
+ command = "npm run build"

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;700;800&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="./styles.min.css" />
+	<link rel="stylesheet" href="./slider.min.css" />
+	<title>Frontend Mentor | Creative single page site</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__logo">
+				<img src="assets/desktop/logo.svg" alt="creative logo" />
+			</div>
+			<nav id="nav" class="nav">
+				<a href="#" class="nav__link">About</a><a href="#" class="nav__link">Service</a><a href="#"
+					class="nav__link">Projects</a><a href="#" class="button button--primary button--smaller">Schedule a
+					Call</a>
+			</nav>
+			<span id="toggle" class="toggle"><i class="icon"></i></span>
+		</div>
+	</header>
+	<main>
+		<section class="page-hero">
+			<div class="container">
+				<div class="page-hero__banner"></div>
+				<div class="page-hero__content">
+					<h1 class="page-hero__title">
+						Branding &amp; website design agency
+					</h1>
+					<p class="page-hero__text">
+						We specialize in visual storytelling by creating
+						cohesive brand and website design solutions for
+						small businesses, giving lasting impressions to
+						audiences in a digital world.
+					</p>
+					<a href="#" class="button button--primary">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<section class="strategy">
+			<div class="strategy__top">
+				<picture>
+					<source srcset="./assets/desktop/image-strategic.jpg" media="(min-width: 1110px)" />
+					<source srcset="./assets/tablet/image-strategic.jpg" media="(min-width: 768px)" />
+					<img class="fit-image" src="./assets/mobile/image-strategic.jpg" alt="design is strategic" />
+				</picture>
+				<div class="strategy__content">
+					<div class="strategy__body">
+						<h2 class="strategy__title">
+							<span>Design</span> is strategic
+						</h2>
+						<p class="strategy__text">
+							A well-crafted design strategy consistently
+							produces desired outcomes and brand awareness.
+							We are firm believers that success lies in
+							creative collaboration with our clients.
+						</p>
+						<a href="#" class="link">Schedule a Call</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="approach">
+			<div class="approach__bottom">
+				<div class="approach__brand">
+					<h2>Our approach for creating a winning brand</h2>
+				</div>
+				<ol class="approach__list">
+					<li class="approach__item">
+						<h3>Brand Strategy</h3>
+						<p>
+							Brand strategy is critical for long-term
+							success. Outshining competitors and capturing
+							the target audience are key.
+						</p>
+					</li>
+					<li class="approach__item">
+						<h3>Brand Design</h3>
+						<p>
+							Keeping the brand design unique and meaningful
+							helps in communicating the brand’s timeless
+							value effectively.
+						</p>
+					</li>
+					<li class="approach__item">
+						<h3>Web Design</h3>
+						<p>
+							A beautifully crafted website is the best tool
+							for brand awareness, and ultimately results in
+							increased revenues.
+						</p>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="slider">
+
+
+			<div class="slider-image">
+				<div id="slider-image" class="slider-image-inner">
+					<div class="slide">
+						<div class="slide-credit">
+							<h3>Lean Product Roadmap</h3>
+							<p>2019 Project</p>
+						</div>
+						<picture>
+							<source srcset="./assets/desktop/image-slide-1.jpg" media="(min-width: 768px)" />
+							<img class="fit-image" src="./assets/mobile/image-slide-1.jpg" alt="Lean Product Roadmap" />
+						</picture>
+					</div>
+					<div class="slide">
+						<div class="slide-credit">
+							<h3>New Majestic Hotel</h3>
+							<p>2019 Project</p>
+						</div>
+						<picture>
+							<source srcset="./assets/desktop/image-slide-2.jpg" media="(min-width: 768px)" />
+							<img class="fit-image" src="./assets/mobile/image-slide-2.jpg" alt="New Majestic Hotel" />
+						</picture>
+					</div>
+					<div class="slide">
+						<div class="slide-credit">
+							<h3>Crypto Dashboard</h3>
+							<p>2016 Project</p>
+						</div>
+						<picture>
+							<source srcset="./assets/desktop/image-slide-3.jpg" media="(min-width: 768px)" />
+							<img class="fit-image" src="./assets/mobile/image-slide-3.jpg" alt="Crypto Dashboard" />
+						</picture>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-content">
+				<div class="slider-content-wrapper">
+					<div id="slider-content" class="slider-content-inner">
+						<div class="content">
+							<h2>Brand naming &amp; <br> guidelines</h2>
+						</div>
+						<div class="content">
+							<h2>Brand identity &amp; <br> merchandise</h2>
+						</div>
+						<div class="content">
+							<h2>Brand identity &amp; <br> web design</h2>
+						</div>
+					</div>
+				</div>
+				<!-- slider arrows -->
+				<div class="slider-arrows">
+					<div id="prev" class="slider-arrow-prev">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+							<g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd">
+								<circle cx="20" cy="20" r="19.5" />
+								<path stroke-width="2" d="M17.5 15l5 5-5 5" />
+							</g>
+						</svg>
+					</div>
+					<div id="next" class="slider-arrow-right">
+						<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+							<g stroke="#F94F4F" fill="none" fill-rule="evenodd">
+								<circle cx="20" cy="20" r="19.5" />
+								<path stroke-width="2" d="M17.5 15l5 5-5 5" />
+							</g>
+						</svg>
+					</div>
+				</div>
+				<!-- ./ -->
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<h2>Let's build something great together.</h2>
+			<a href="#" class="button button--primary button--smaller">Schedule a Call</a>
+		</div>
+	</footer>
+	<!-- script toggle menu -->
+	<script>
+		const toggle = document.getElementById("toggle");
+		const nav = document.getElementById("nav");
+
+		toggle.onclick = () => {
+			nav.classList.toggle("dropdown");
+		};
+	</script>
+	<script src="./slider.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => Slider());
+	</script>
+</body>
+
+</html>

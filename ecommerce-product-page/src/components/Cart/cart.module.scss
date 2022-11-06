@@ -1,0 +1,41 @@
+/* Cart */
+.cart {
+    cursor: pointer;
+
+    @media (min-width: 72rem) {
+        position: relative;
+        padding: 4rem 0;
+    }
+
+    &__link {
+        $size: 2.8rem;
+        position: relative;
+        display: block;
+        width: $size;
+
+
+        &:focus {
+            overflow: unset;
+            + div {
+                // opacity: 1;
+                display: block;
+                height: auto;
+            }
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        right: 0;
+        top: -0.6em;
+        z-index: 2;
+        padding: .1rem .4rem;
+        color: var(--clr-white);
+        font-size: 1rem;
+        font-weight: var(--font-weight-700);
+        text-align: center;
+        border-radius: 6px;
+        background-color: var(--clr-orange);
+    }
+
+}

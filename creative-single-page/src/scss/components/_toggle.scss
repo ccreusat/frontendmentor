@@ -1,0 +1,28 @@
+.toggle {
+	cursor: pointer;
+
+	.icon {
+		display: block;
+		width: 24px;
+		height: 18px;
+		background: url(../../../assets/mobile/icon-hamburger.svg);
+	}
+
+	@media only screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.dropdown {
+		display: block;
+		& ~ .toggle {
+			& > .icon {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: url(../../../assets/mobile/icon-cross.svg);
+			}
+		}
+	}
+}

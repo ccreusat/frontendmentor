@@ -1,0 +1,48 @@
+.features {
+	margin: 3em;
+	text-align: center;
+
+	h3 {
+		margin-top: 2em;
+
+		& + p {
+			margin-top: 16px;
+		}
+	}
+
+	&__item {
+		margin: 25px 0;
+	}
+
+	@media only screen and (min-width: 715px) and (max-width: 66em) {
+		&--grid {
+			.container {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+
+	@media only screen and (min-width: 66em) {
+		& {
+			margin: 50px 0;
+		}
+
+		.container {
+			max-width: 1110px;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		&__item {
+			padding: 50px 15px;
+			flex: 1 1 350px;
+
+			& svg {
+				height: 72px;
+			}
+		}
+	}
+}

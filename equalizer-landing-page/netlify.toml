@@ -1,0 +1,4 @@
+[build]
+ base    = "equalizer-landing-page"
+ publish = "public/"
+ command = "npm run build"

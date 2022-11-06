@@ -1,0 +1,60 @@
+@mixin buttonConf($text: var(--clr-white), $background, $hover) {
+    color: $text;
+    background: $background;
+    transition: color 400ms cubic-bezier(0.23, 1, 0.320, 1), background 400ms cubic-bezier(0.23, 1, 0.320, 1);
+
+    @media (hover:hover) {
+        &:hover {
+            background-color: $hover;
+        }
+    }
+}
+
+.button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    letter-spacing: -0.18px;
+    border: 0;
+    border-radius: 12px;
+    background-color: var(--clr-white);
+
+    .gatsby-image-wrapper-constrained {
+        margin-right: 1rem;
+    }
+
+    &.ios {
+        @include buttonConf(
+            $background:var(--clr-text),
+            $hover:var(--clr-cyan)
+        );
+        
+        // for design system purpose
+        &.hover {
+            background-color: var(--clr-cyan);
+        }
+        
+    }
+
+    &.android {
+        @include buttonConf(
+            $text: var(--clr-text),
+            $background:var(--clr-white),
+            $hover:var(--clr-yellow)
+        );
+
+        // for design system purpose
+        &.hover {
+            background-color: var(--clr-yellow);
+        }
+    }
+
+    &.block {
+        width: 100%;
+    }
+}

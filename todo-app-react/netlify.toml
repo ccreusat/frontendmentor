@@ -1,0 +1,4 @@
+[build]
+ base    = "todo-app-react"
+ publish = "dist/"
+ command = "npm run build"

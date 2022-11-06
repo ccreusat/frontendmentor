@@ -1,0 +1,31 @@
+button {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+.button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    line-height: 1;
+    padding: 1.8rem max(1rem, 2rem);
+    color: var(--clr-white);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-700);
+    background-color: var(--clr-orange);
+    transition: background-color .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    @media (max-width: 71rem) {
+        margin-top: 1.6rem;
+    }
+}
+
+[disabled] {
+    cursor: not-allowed;
+    opacity: .8;
+}
+
+.button:hover {
+    background-color: var(--clr-orange-hover);
+}

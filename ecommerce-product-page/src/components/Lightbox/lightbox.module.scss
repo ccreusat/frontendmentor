@@ -1,0 +1,68 @@
+.lightbox {
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    > div {
+        position: relative;
+        z-index: 4;
+        margin: auto;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    figure {
+        width: 100%;
+
+        > img {
+            width: 550px;
+            height: 550px;
+        }
+    }
+
+    ul {
+        max-width: 445px;
+        margin: auto;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .thumbnails {
+        margin: auto;
+    }
+
+    &__close {
+        cursor: pointer;
+        margin-bottom: 2.4rem;
+
+        > svg {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin-left: auto;
+        }
+
+        &:hover {
+            > svg {
+                path {
+                    fill: var(--clr-orange);
+                }
+            }
+        }
+    }
+}

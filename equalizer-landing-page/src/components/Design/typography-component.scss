@@ -1,0 +1,17 @@
+.typography-component {
+    flex: 0 ​0 50%;
+
+    &__header {
+        margin-bottom: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.4rem;
+
+        > span {
+            &:not(:first-child) {
+                color: rgba(#191826, 50%);
+            }
+        }
+    }
+}

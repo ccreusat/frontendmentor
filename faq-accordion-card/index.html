@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.min.css" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="faq-accordion">
+        <div class="faq-accordion__illustration">
+          <img
+            class="box"
+            src="./images/illustration-box-desktop.svg"
+            alt="Box illustration"
+          />
+          <picture class="faq-accordion__image">
+            <source
+              srcset="./images/illustration-woman-online-desktop.svg"
+              media="(min-width: 800px)"
+            />
+            <img
+              src="./images/illustration-woman-online-mobile.svg"
+              alt="Woman illustration"
+            />
+          </picture>
+        </div>
+        <div class="faq-accordion__content">
+          <h1>FAQ</h1>
+          <ul class="faq-accordion__list">
+            <li class="faq-accordion__item">
+              <input class="radio" type="radio" name="faq" id="faq-1" checked />
+              <label for="faq-1">
+                How many team members can I invite?
+                <i class="icon-arrow"></i>
+              </label>
+              <p>
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </li>
+            <li class="faq-accordion__item">
+              <input class="radio" type="radio" name="faq" id="faq-2" /><label
+                for="faq-2"
+              >
+                What is the maximum file upload size?
+                <i class="icon-arrow"></i
+              ></label>
+              <p>
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </li>
+            <li class="faq-accordion__item">
+              <input class="radio" type="radio" name="faq" id="faq-3" /><label
+                for="faq-3"
+              >
+                How do I reset my password?
+                <i class="icon-arrow"></i
+              ></label>
+              <p>
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </li>
+            <li class="faq-accordion__item">
+              <input class="radio" type="radio" name="faq" id="faq-4" /><label
+                for="faq-4"
+                >Can I cancel my subscription? <i class="icon-arrow"></i
+              ></label>
+              <p>
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </li>
+            <li class="faq-accordion__item">
+              <input class="radio" type="radio" name="faq" id="faq-5" /><label
+                for="faq-5"
+                >Do you provide additional support? <i class="icon-arrow"></i
+              ></label>
+              <p>
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/ccreusat">Clément Creusat</a>.
+    </div>
+  </body>
+</html>

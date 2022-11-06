@@ -1,0 +1,4 @@
+[build]
+ base    = "advice-generator-app"
+ publish = "dist/"
+ command = "npm run build"

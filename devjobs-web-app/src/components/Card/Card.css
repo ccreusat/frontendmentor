@@ -1,0 +1,32 @@
+.card {
+  padding-top: 5rem;
+}
+
+.card .brand-logo {
+  bottom: 90%;
+}
+
+.card strong:only-of-type {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline: 1.2rem;
+}
+
+.card div:only-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card-title {
+  margin-block: 0.8rem;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-location {
+  justify-self: flex-end;
+}

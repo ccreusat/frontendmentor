@@ -1,0 +1,60 @@
+.beta {
+	&__content {
+		position: relative;
+		padding: 64px 33px;
+		background-image: url(../../assets/shared/mobile/bg-beta.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media only screen and (min-width: 44.68em) {
+			background-image: url(../../assets/shared/tablet/bg-beta.jpg);
+		}
+
+		@media only screen and (min-width: 66em) {
+			background-image: url(../../assets/shared/desktop/bg-beta.jpg);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 128px;
+			height: 6px;
+			transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+			background: linear-gradient(26.57deg,
+					#ffc593 0%,
+					#bc7198 43.29%,
+					#5a77ff 83.33%);
+		}
+	}
+
+	&__title {
+		color: var(--pure-white);
+	}
+
+	@media only screen and (min-width: 44.68em) {
+		&__content {
+			padding: 68px 3.6em;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&::before {
+				left: 0;
+				width: 6px;
+				height: 100%;
+			}
+		}
+
+		&__title {
+			max-width: 350px;
+		}
+	}
+
+	@media only screen and (min-width: 66em) {
+		&__content {
+			padding: 6em 8em;
+		}
+	}
+}

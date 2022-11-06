@@ -1,0 +1,4 @@
+[build]
+ base    = "interactive-rating"
+ publish = "dist/"
+ command = "npm run build"

@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --moderate-cyan: hsl(176, 50%, 47%);
+  --dark-cyan: 176, 72%, 28%;
+  --black: hsl(0, 0%, 0%);
+  --dark: hsla(0, 0%, 18%, 1);
+  --dark-gray: hsl(0, 0%, 48%);
+  --body: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --font-family: "Commissioner", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+  font-display: swap;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  min-height: 100vh;
+  color: var(--dark-gray);
+  background: var(--body);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  transition: all 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+input {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Utilities */
+.ta-center {
+  text-align: center;
+}
+
+.header {
+  padding: 3.2rem 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--black);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.text {
+  margin: 1.6rem 0 2.4rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.button-group > .primary {
+  flex: 1;
+}
+
+.primary,
+button[disabled] {
+  padding-inline: 2.4rem;
+  height: 48px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 3.4rem;
+  color: var(--white);
+}
+
+button.large {
+  height: 56px;
+  font-size: 1.6rem;
+}
+
+.primary {
+  background-color: var(--moderate-cyan);
+}
+
+button[disabled] {
+  background-color: var(--dark-gray);
+}
+
+/* Bookmark Button */
+.round {
+  height: 5.6rem;
+  border-radius: 3rem;
+  background-color: #f5f5f5;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.round strong {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  font-size: 1.6rem;
+  color: var(--dark-gray);
+  opacity: 0;
+  width: 0;
+  transition: all 350ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.round.bookmarked {
+  background-color: hsla(var(--dark-cyan), 10%);
+}
+.round.bookmarked strong {
+  color: hsl(var(--dark-cyan));
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--moderate-cyan);
+}
+
+/* If Hover is detected */
+@media (hover: hover) {
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .primary:hover {
+    background-color: hsl(var(--dark-cyan));
+  }
+  .round:hover {
+    background-color: #f5f5f5;
+  }
+  .round:hover strong {
+    color: var(--dark-gray);
+    background-color: #f5f5f5;
+  }
+  .round:hover svg circle {
+    fill: var(--dark-gray);
+  }
+}
+
+@media (min-width: 45em) {
+  h1,
+  h2,
+  h3 {
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .disabled {
+    pointer-events: none;
+  }
+
+  .round strong {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    opacity: 1;
+    width: auto;
+  }
+}
+
+/* CSS Placeholders based on Bootstrap 5 */
+
+.placeholder {
+  display: inline-block;
+  min-height: 0.6em;
+  vertical-align: middle;
+  cursor: wait;
+  background-color: currentColor;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.placeholder-glow {
+  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
+  animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+@keyframes placeholder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.placeholder-wave {
+  mask-image: linear-gradient(
+    130deg,
+    var(--dark) 55%,
+    rgba(0, 0, 0, (1 - 0.2)) 75%,
+    var(--dark) 95%
+  );
+  mask-size: 200% 100%;
+  animation: placeholder-wave 2s linear infinite;
+}
+
+@keyframes placeholder-wave {
+  100% {
+    mask-position: -200% 0%;
+  }
+}

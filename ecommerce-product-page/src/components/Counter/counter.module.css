@@ -1,0 +1,16 @@
+.counter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem var(--spacing-16);
+    background-color: var(--clr-light-grayish-blue);
+}
+
+.counter > * {
+    display: inline-flex;
+    align-items: center;
+}
+
+.counter__count {
+    font-size: var(--spacing-16);
+    font-weight: var(--font-weight-700);
+}

@@ -1,0 +1,43 @@
+.color-component {
+    flex: 0 ​0 35rem;
+
+    &__color {
+        display: block;
+        margin-bottom: 2rem;
+        padding: 2.4rem;
+        width: 100%;
+        font-size: 2.4rem;
+        min-height: 100px;
+        border-radius: 1.2rem;
+    }
+
+    &__info {
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            + div {
+                margin-top: .8rem;
+            }
+        }
+
+        span {
+            &:is(:first-child) {
+                color: rgba(#191826, 50%);
+            }
+        }
+    }
+
+    &:nth-child(4) {
+        .color-component__color {
+            border: 1px solid #191826;
+        }
+    }
+
+    &:last-child {
+        .color-component__color {
+            color: #FCFAF9;
+        }
+    }
+}

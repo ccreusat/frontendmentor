@@ -1,0 +1,4 @@
+[build]
+ base    = "static-job-listings"
+ publish = "dist/"
+ command = "npm run build"

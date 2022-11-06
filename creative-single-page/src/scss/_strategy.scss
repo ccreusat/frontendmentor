@@ -1,0 +1,93 @@
+@import "./mixins/flex";
+
+.strategy {
+	// clear: both;
+
+	&__content {
+		padding: 3.88rem var(--padding-24);
+		background-color: var(--color-bg-black);
+	}
+
+	&__title {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -5rem;
+			width: 63px;
+			height: 29px;
+			background-image: url(../../assets/desktop/bg-pattern-wave-red.svg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+	}
+
+	&__title,
+	&__text {
+		color: var(--color-white);
+	}
+	&__title {
+		span {
+			color: var(--color-red);
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		&__top {
+			display: grid;
+			grid-template-columns: 49% 51%;
+			grid-template-rows: minmax(auto, 658px);
+		}
+		&__content {
+			padding: 6.66rem 2.22rem 6.66rem 3.88rem;
+		}
+		&__title {
+			max-width: 11rem;
+
+			&::before {
+				left: -5.5rem;
+				top: 1rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1110px) {
+		&__top {
+			grid-template-columns: 51% 49%;
+			grid-template-rows: minmax(auto, 984px);
+		}
+
+		&__content {
+			position: relative;
+			@include flex();
+			max-height: 43.55rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+
+				left: -4rem;
+				top: 12rem;
+				width: 135px;
+				height: 61px;
+				background-image: url(../../assets/desktop/bg-pattern-wave-red.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+
+		&__body {
+			margin: 0 auto;
+			max-width: 445px;
+		}
+
+		&__title {
+			max-width: inherit;
+			&::before {
+				display: none;
+			}
+		}
+	}
+}

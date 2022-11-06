@@ -1,0 +1,26 @@
+@use 'base';
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+.title {
+	margin: 1em 0 0.8em;
+	color: base.$color-gray;
+	font-size: 2.4em;
+	font-family: base.$font-secondary;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.text {
+	margin: 1em 0 1.8em;
+	color: base.$color-text;
+	line-height: 1.7em;
+}
+
+@media only screen and (min-width: 52em) {
+	.title {
+		margin-bottom: 0;
+	}
+	.text {
+		margin-bottom: 5.5em;
+	}
+}

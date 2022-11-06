@@ -1,0 +1,41 @@
+@import "../mixins/flex";
+
+.header {
+	position: relative;
+	padding: 2.22rem var(--padding-24);
+
+	@media only screen and (min-width: 768px) {
+		& {
+			padding: 56px 40px;
+			background: linear-gradient(
+				to right,
+				white 35%,
+				var(--color-red) 35%
+			);
+		}
+		.container {
+			@include flex();
+		}
+	}
+
+	@media only screen and (min-width: 1110px) {
+		& {
+			padding-left: 0;
+			padding-right: 0;
+			background: linear-gradient(
+				to right,
+				white 50%,
+				var(--color-red) 50%
+			);
+		}
+	}
+
+	/* @media only screen and (min-width: 1110px) {
+		& {
+		}
+	} */
+
+	.container {
+		@include flex();
+	}
+}

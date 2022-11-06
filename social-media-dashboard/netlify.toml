@@ -1,0 +1,4 @@
+[build]
+ base    = "social-media-dashboard"
+ publish = "dist/"
+ command = "npm run build"

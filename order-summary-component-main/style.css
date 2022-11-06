@@ -1,0 +1,179 @@
+*,
+*::before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+
+	--pale-bright-blue: hsl(245, 83%, 68%);
+	--pale-light: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+
+	--pattern-desktop: url(./images/pattern-background-desktop.svg);
+	--pattern-mobile: url(./images/pattern-background-mobile.svg);
+
+	--font: "Red Hat Display", sans-serif;
+	--font-medium: 1.6rem;
+	--font-weight: 700;
+
+	--spacing: 3.2rem;
+}
+
+body {
+	font-family: var(--font);
+	font-size: 1.6rem;
+	background: var(--pattern-mobile) 0 0 / 100% no-repeat var(--pale-blue);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 900;
+	color: var(--dark-blue, darkblue);
+}
+
+h1 + p {
+	margin-top: 18px;
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 26px;
+	font-size: var(--font-medium, 16px);
+	color: var(--desaturated-blue, blue);
+}
+
+button {
+	cursor: pointer;
+	font-family: var(--font);
+	background-color: transparent;
+	border: 0;
+}
+
+.button {
+	display: block;
+	padding: 15px;
+	width: 100%;
+	font-weight: var(--font-weight, 400);
+	font-size: 1.4rem;
+	border-radius: 10px;
+	transition: color 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+		background 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.button--primary {
+	color: white;
+	box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+	background-color: var(--bright-blue, cadetblue);
+}
+
+.button--primary:hover {
+	background-color: var(--pale-bright-blue, cornflowerblue);
+}
+
+.button--secondary {
+	padding: 0;
+	color: var(--desaturated-blue, blue);
+}
+
+.button--secondary:hover {
+	color: var(--dark-blue, darkblue);
+}
+
+.button-group {
+	margin-top: var(--spacing, 32px);
+}
+
+.button-group .button + .button {
+	margin-top: var(--spacing, 32px);
+}
+
+.card {
+	overflow: hidden;
+	margin: 70px 24px;
+	max-width: 450px;
+	border-radius: 20px;
+	box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+	background-color: white;
+}
+
+.card__content {
+	margin: calc(var(--spacing) - 2);
+	text-align: center;
+}
+
+.card__plan {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px;
+	border-radius: 10px;
+	background-color: var(--pale-light, lightgrey);
+}
+
+.card__info {
+	text-align: left;
+	padding-left: 1rem;
+	flex: 2;
+}
+
+.card__plan strong {
+	display: block;
+	color: var(--dark-blue, darkblue);
+}
+
+.card__price {
+	margin-top: 6px;
+	font-size: var(--font-medium, 16px);
+	color: var(--desaturated-blue, blue);
+}
+
+.card__link {
+	color: var(--bright-blue, cadetblue);
+	text-decoration: underline;
+	letter-spacing: 0.5px;
+	font-weight: var(--font-weight, 400);
+	font-size: 1.2rem;
+}
+
+.card__link:hover {
+	color: var(--pale-bright-blue, cornflowerblue);
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 520px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: var(--pattern-desktop);
+	}
+
+	.card {
+		margin: 0;
+	}
+
+	.card__content {
+		margin: calc(var(--spacing, 2.4rem) + 1.6rem);
+	}
+}

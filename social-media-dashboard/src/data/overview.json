@@ -1,0 +1,82 @@
+[
+	{
+		"id": "1",
+		"title": "Page Views",
+		"media": "facebook",
+		"mediaPath": "./images/icon-facebook.svg",
+		"score": "87",
+		"number": 3,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "2",
+		"title": "Likes",
+		"media": "facebook",
+		"mediaPath": "./images/icon-facebook.svg",
+		"score": "52",
+		"number": 2,
+		"stats": "down",
+		"statsPath": "./images/icon-down.svg"
+	},
+	{
+		"id": "3",
+		"title": "Likes",
+		"media": "instagram",
+		"mediaPath": "./images/icon-instagram.svg",
+		"score": "5462",
+		"number": 2257,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "4",
+		"title": "Profile Views",
+		"media": "instagram",
+		"mediaPath": "./images/icon-instagram.svg",
+		"score": "52K",
+		"number": 1375,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "5",
+		"title": "Retweets",
+		"media": "twitter",
+		"mediaPath": "./images/icon-twitter.svg",
+		"score": "117",
+		"number": 303,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "6",
+		"title": "Likes",
+		"media": "twitter",
+		"mediaPath": "./images/icon-twitter.svg",
+		"score": "507",
+		"number": 553,
+		"stats": "up",
+		"statsPath": "./images/icon-up.svg"
+	},
+	{
+		"id": "7",
+		"title": "Likes",
+		"media": "youtube",
+		"mediaPath": "./images/icon-youtube.svg",
+		"score": "107",
+		"number": 19,
+		"stats": "down",
+		"statsPath": "./images/icon-down.svg"
+	},
+	{
+		"id": "8",
+		"title": "Likes",
+		"media": "youtube",
+		"mediaPath": "./images/icon-youtube.svg",
+		"score": "1407",
+		"number": 19,
+		"stats": "down",
+		"statsPath": "./images/icon-down.svg"
+	}
+]

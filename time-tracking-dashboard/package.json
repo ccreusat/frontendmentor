@@ -1,0 +1,28 @@
+{
+  "name": "my-page",
+  "version": "0.0.0",
+  "main": "dist/my-page.es.js",
+  "exports": {
+    ".": "./dist/my-page.es.js"
+  },
+  "types": "types/my-page.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4"
+  },
+  "repository": "git@github.com:ccreusat/time-tracking-dashboard.git",
+  "author": "clementcreusat <clement.creusat@opendigitaleducation.com>",
+  "license": "MIT"
+}

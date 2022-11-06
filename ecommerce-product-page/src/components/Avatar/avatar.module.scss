@@ -1,0 +1,21 @@
+.avatar {
+    --avatar-size: 50px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+    @media (max-width: 71rem) {
+        --avatar-size: 28px;
+    }
+}
+
+.avatar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.avatar:hover {
+    border-color: var(--clr-orange);
+}

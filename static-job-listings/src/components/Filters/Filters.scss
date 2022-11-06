@@ -1,0 +1,70 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.filters {
+  & {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 74em;
+    margin: -2em 1.6em 0;
+    padding: 1.5em 3em 1.5em 1.5em;
+    border-radius: 5px;
+    background-color: $color-white;
+    box-shadow: 0 0 10px 4px hsla(180, 29%, 50%, 0.2);
+    @include flex($justify: flex-start, $wrap: wrap, $gap: 1em);
+  }
+
+  &.fixed {
+    position: fixed;
+    z-index: 4;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    transition: transform 350ms ease-in;
+    transform: translateY(0);
+  }
+
+  strong {
+    padding-left: 0.6em;
+    @include flex($gap: 0.6em);
+    @include label();
+  }
+
+  .remove {
+    margin-left: 0.6em;
+    padding: 6px;
+    line-height: 1rem;
+    color: $color-white;
+    border-radius: 0 $border-radius $border-radius 0;
+    background-color: $color-primary;
+  }
+
+  .clear {
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    padding: 5px 8px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $color-dark-cyan;
+    border: 0;
+    background: transparent;
+    @include pxToEm(13);
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (min-width: 58.66em) {
+    margin: -2em auto 0;
+    padding: 1.5em 2em;
+
+    .clear {
+      right: 2em;
+    }
+  }
+}

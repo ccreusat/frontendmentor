@@ -1,0 +1,4 @@
+[build]
+ base    = "tip-calculator-app"
+ publish = "public/"
+ command = "npm run build"

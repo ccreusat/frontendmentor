@@ -1,0 +1,53 @@
+.grid-section,
+.flex-section,
+.button-container {
+    margin: 4.8rem auto 15rem;
+}
+
+.grid-section,
+.flex-section {
+    gap: 3rem;
+}
+
+.flex-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid-section {
+    display: grid;
+    row-gap: 5rem;
+    column-gap: 8rem;
+    grid-template-columns: 50% 40%;
+
+    > * {
+        &:nth-child(2) {
+            grid-row-start: 2;
+        }
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 10rem;
+    border-radius: 12px;
+    background-color: var(--clr-red);
+
+    article {
+        > div {
+            + div {
+                margin-top: 6rem;
+            }
+        }
+    }
+
+    .button-info-text {
+        margin-top: 1.2rem;
+        text-align: center;
+        line-height: 32px;
+        letter-spacing: -0.16px;
+        color: var(--clr-white);
+    }
+}

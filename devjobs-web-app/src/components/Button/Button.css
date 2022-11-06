@@ -1,0 +1,65 @@
+/* 3 - Buttons */
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+[class*="button-"] {
+  --btn-bg: #fff;
+  --btn-color-text: #212121;
+  --btn-margin-block: 0;
+  --btn-margin-inline: 0;
+  --btn-padding-block: 1.4rem;
+  --btn-padding-inline: 3rem;
+  --btn-border-radius: 0.5rem;
+  --btn-font-weight: 700;
+  --btn-display: inline-block;
+  display: var(--btn-display);
+  margin-block: var(--btn-margin-block);
+  margin-inline: var(--btn-margin-inline);
+  padding-block: var(--btn-padding-block);
+  padding-inline: var(--btn-padding-inline);
+  border-radius: var(--btn-border-radius);
+  font-weight: var(--btn-font-weight);
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-color-text);
+  text-align: center;
+  transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[class*="button-"] svg path {
+  fill: currentColor;
+}
+
+.button-primary {
+  --btn-bg: hsl(var(--violet-400));
+  --btn-color-text: hsl(var(--white));
+}
+
+.button-secondary {
+  --btn-bg: hsla(var(--violet-400), 10%);
+  --btn-color-text: hsl(var(--violet-400));
+}
+
+@media (hover: hover) {
+  .button-primary:hover {
+    --btn-bg: hsl(var(--violet-300));
+  }
+
+  .button-secondary:hover {
+    --btn-bg: hsla(var(--violet-400), 35%);
+  }
+}
+
+.button-with-icon {
+  padding: 1.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.button-with-icon svg {
+  width: 2rem;
+  height: 2rem;
+}

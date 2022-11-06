@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+@import "../utils/variables";
+@import "../utils/mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --color-background: hsl(180, 52%, 96%);
+  --color-primary: hsl(180, 29%, 50%);
+  --color-light-cyan: hsl(180, 31%, 95%);
+  --color-dark-cyan: hsl(180, 8%, 52%);
+  --color-darker-cyan: hsl(180, 14%, 20%);
+  --color-white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+  font-size: $font-base;
+  line-height: 1;
+  background-color: var(--color-background);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.badge {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  padding: 0.6em 0.6em 0.3em;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 20px;
+  @include pxToEm(11);
+
+  &--new {
+    background-color: $color-primary;
+  }
+
+  &--featured {
+    background-color: $color-darker-cyan;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  // gap: 1em;
+
+  @media only screen and (max-width: 58.66em) {
+    flex-wrap: wrap;
+  }
+}
