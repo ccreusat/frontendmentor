@@ -15,7 +15,7 @@ export const getJobs = async (records: number) => {
   return record.slice(0, records);
 };
 
-export const getJob = async (id: any) => {
+export const getJob = async (id: string | undefined) => {
   const response = await instance.get("/");
   const { record } = response.data;
   const job = await record.find((item: ItemProps) => item.id === Number(id));

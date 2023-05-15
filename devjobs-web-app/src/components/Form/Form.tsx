@@ -1,15 +1,27 @@
-import { Fragment, useRef } from "react";
-import { IconFilter, IconLocation, IconSearch } from "../../icons";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useRef } from "react";
+import { IconLocation, IconSearch } from "../../icons";
 import { Button } from "../Button";
 import { CustomCheckbox } from "../Checkbox";
-import { Icon } from "../Icon";
 import { FormFieldset } from "./Fieldset";
 import { FormInput } from "./Input";
 import { FormLabel } from "./Label";
-import "./Form.css";
 import { IconButton } from "../IconButton";
+import "./Form.css";
 
-export const Form = ({ setQueries }: any) => {
+export const Form = ({
+  setQueries,
+}: {
+  setQueries: ({
+    textFilter,
+    locationFilter,
+    fulltimeFilter,
+  }: {
+    textFilter: string;
+    locationFilter: string;
+    fulltimeFilter: boolean;
+  }) => void;
+}) => {
   const refs = useRef<HTMLInputElement[]>([]);
   const addInputs = (target: any) => {
     if (target && !refs.current.includes(target)) {

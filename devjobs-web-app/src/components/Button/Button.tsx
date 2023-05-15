@@ -13,6 +13,7 @@ interface ButtonProps {
   disabled?: boolean;
   target?: React.HTMLAttributeAnchorTarget;
   rel?: string;
+  className?: string;
   onClick?: () => void;
 }
 
@@ -24,10 +25,11 @@ export const Button = ({
   withIcon = false,
   children,
   disabled,
+  className,
   onClick,
   ...props
 }: ButtonProps) => {
-  const classNames = clsx({ "button-with-icon": withIcon });
+  const classNames = clsx({ "button-with-icon": withIcon, className });
   const CustomTag = isLink ? "a" : "button";
   return (
     <CustomTag

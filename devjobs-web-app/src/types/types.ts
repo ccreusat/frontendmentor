@@ -1,8 +1,10 @@
+import { UseQueryResult } from "react-query";
+
 export type ReactQueryProps = {
   isLoading: boolean;
   isError: boolean;
-  data: any;
-  error: any;
+  data: UseQueryResult;
+  error: Error;
   isFetching: boolean;
   isPreviousData: boolean;
 };
@@ -32,8 +34,14 @@ export type JobProps = {
   website: string;
   location: string;
   description: string;
-  requirements: any;
-  role: any;
+  requirements: {
+    content: string;
+    items: string[];
+  };
+  role: {
+    content: string;
+    items: string[];
+  };
 };
 
 export type QueriesProps = {

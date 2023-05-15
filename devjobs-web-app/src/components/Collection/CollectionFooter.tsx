@@ -26,7 +26,7 @@ export const CollectionFooter = ({
           disabled={!isLoadable}
           onClick={() => {
             if (!isPreviousData && isLoadable) {
-              setPage((prevState: any) => ({
+              setPage((prevState: { countPage: number }) => ({
                 ...prevState,
                 countPage: prevState.countPage + 3,
               }));

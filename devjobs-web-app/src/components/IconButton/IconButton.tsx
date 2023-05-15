@@ -1,8 +1,20 @@
+import { ReactNode } from "react";
 import { Button } from "../Button";
 
-export const IconButton = ({ children, ...props }: any) => {
+export const IconButton = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
   return (
-    <Button {...props} variant="primary" type="submit" withIcon={true}>
+    <Button
+      className={className}
+      variant="primary"
+      type="submit"
+      withIcon={true}
+    >
       {children}
     </Button>
   );

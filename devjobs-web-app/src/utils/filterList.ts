@@ -1,6 +1,6 @@
 import { ItemProps, QueriesProps } from "../types/types";
 
-export function filterList(data: any, queries: QueriesProps) {
+export function filterList(data: [], queries: QueriesProps) {
   let result = [...data];
   const { textFilter, locationFilter, fulltimeFilter } = queries;
 

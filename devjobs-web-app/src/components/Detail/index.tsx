@@ -1,1 +1,0 @@
-import { DetailSection } from "./Section";

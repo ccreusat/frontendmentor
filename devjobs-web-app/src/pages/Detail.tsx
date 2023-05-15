@@ -5,16 +5,18 @@ import { useParams } from "react-router-dom";
 import { BrandLogo, Button, EmptyScreen } from "../components";
 import { DetailSection } from "../components/Detail/Section";
 // TypeScript
-import { JobProps, ReactQueryProps } from "../types/types";
+import { JobProps } from "../types/types";
 // API
 import { getJob } from "../api/api";
 import { useEffect, useState } from "react";
 
 const Detail = () => {
-  const { id } = useParams<"id">();
-  const { isLoading, data }: ReactQueryProps = useQuery("job", () =>
-    getJob(id)
-  );
+  const { id } = useParams();
+
+  const { isLoading, data } = useQuery({
+    queryKey: ["job"],
+    queryFn: () => getJob(id),
+  });
   const [job, setJob] = useState({} as JobProps);
 
   useEffect(() => setJob(data), [data]);

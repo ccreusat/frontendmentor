@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useMemo } from "react";
+import React, { createContext, useEffect, useMemo } from "react";
 import { useSwitchTheme } from "../hooks";
 
 type ThemeType = "light" | "dark";
@@ -10,7 +10,7 @@ interface ContextProps {
 
 export const ThemeContext = createContext<ContextProps>(null!);
 
-const ThemeProvider = ({ children }: React.PropsWithChildren<{}>) => {
+const ThemeProvider = ({ children }: React.PropsWithChildren<object>) => {
   const [theme, setTheme] = useSwitchTheme();
 
   useEffect(() => {
@@ -29,23 +29,13 @@ const ThemeProvider = ({ children }: React.PropsWithChildren<{}>) => {
     return () => {
       window.removeEventListener("change", handlePreferScheme);
     };
-  }, []);
+  }, [setTheme]);
 
   const store = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
   return (
     <ThemeContext.Provider value={store}>{children}</ThemeContext.Provider>
   );
-};
-
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error(
-      "useTheme must be inside a <ThemeContext.provider> with a value"
-    );
-  }
-  return context;
 };
 
 export default ThemeProvider;
