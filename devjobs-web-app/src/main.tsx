@@ -6,8 +6,8 @@ import ThemeProvider from "./context/ThemeContext";
 import { StrictMode } from "react";
 
 import { Layout } from "./layouts/Layout";
-import Home, { loader as homeLoader, action as homeAction } from "./pages/home";
-import Detail, { loader as detailLoader } from "./pages/detail";
+import Home, { loader as homeLoader, action as homeAction } from "./pages/Home";
+import Detail, { loader as detailLoader } from "./pages/Detail";
 
 import "./reset.css";
 import "./utilities.css";
