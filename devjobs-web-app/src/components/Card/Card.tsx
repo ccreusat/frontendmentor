@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { ItemProps } from "../../types/types";
 import { BrandLogo } from "../BrandLogo";
 import "./Card.css";
+import { Job } from "../../types/types";
 
-export const Card = (item: ItemProps) => {
+export const Card = (item: Job) => {
   return (
     <article className="card">
       <BrandLogo logoBackground={item.logoBackground} company={item.company} />

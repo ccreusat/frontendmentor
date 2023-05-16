@@ -1,13 +1,12 @@
+import { Form } from "react-router-dom";
 import { Button } from "../Button";
 
 type CollectionFooterProps = {
-  isLoadable: boolean;
   isFetching: boolean;
   isPreviousData: boolean;
   setPage: (state: any) => void;
 };
 export const CollectionFooter = ({
-  isLoadable,
   isFetching,
   isPreviousData,
   setPage,
@@ -19,13 +18,13 @@ export const CollectionFooter = ({
         textAlign: "center",
       }}
     >
-      {isLoadable && (
+      <Form method="post">
         <Button
-          type="button"
+          type="submit"
           variant="primary"
-          disabled={!isLoadable}
+          disabled={isPreviousData}
           onClick={() => {
-            if (!isPreviousData && isLoadable) {
+            if (!isPreviousData) {
               setPage((prevState: { countPage: number }) => ({
                 ...prevState,
                 countPage: prevState.countPage + 3,
@@ -35,7 +34,7 @@ export const CollectionFooter = ({
         >
           {isFetching ? "Loading..." : "Load More"}
         </Button>
-      )}
+      </Form>
     </footer>
   );
 };

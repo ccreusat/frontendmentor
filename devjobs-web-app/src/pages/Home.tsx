@@ -1,28 +1,52 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState } from "react";
-import { CollectionFooter } from "../components/Collection/CollectionFooter";
 import { CollectionList } from "../components/Collection/CollectionList";
 import { Form } from "../components/Form";
+import { getJobs } from "../api/api";
+import { QueryClient, useQuery } from "react-query";
+import { EmptyScreen } from "../components";
+import { ActionFunctionArgs, defer, useActionData } from "react-router-dom";
 
-type HomeProps = {
-  collectionRef: string[];
-  isFetching: boolean;
-  isLoadable: boolean;
-  isPreviousData: boolean;
-  setPage: (arg: any) => void;
+export const homeQuery = () => {
+  return {
+    queryKey: ["jobs"],
+    queryFn: () => getJobs(),
+    keepPreviousData: true,
+  };
 };
 
-export const Home = ({
-  collectionRef,
-  isFetching,
-  isLoadable,
-  isPreviousData,
-  setPage,
-}: HomeProps): JSX.Element => {
+export const loader = (queryClient: QueryClient) => {
+  return async () => {
+    const query = homeQuery();
+    return defer({
+      jobs:
+        queryClient.getQueryData(query.queryKey) ??
+        queryClient.fetchQuery(query),
+    });
+  };
+};
+
+export const action = async ({ params, request }: ActionFunctionArgs) => {
+  console.log("action", { params, request });
+  return 6;
+};
+
+const Home = (): JSX.Element => {
   const [queries, setQueries] = useState({
     textFilter: "",
     locationFilter: "",
     fulltimeFilter: false,
   });
+
+  const actionData = useActionData();
+
+  // const { jobs } = useLoaderData() as Awaited<ReturnType<typeof loader>>;
+  // const { jobs } = useLoaderData() as { jobs: Job[] };
+  const { isLoading } = useQuery(homeQuery());
+
+  console.log({ actionData });
+
+  if (isLoading) return <EmptyScreen text="Loading..." />;
 
   return (
     <section
@@ -33,13 +57,17 @@ export const Home = ({
     >
       <h1 className="sr-only">Devjobs Web App</h1>
       <Form setQueries={setQueries} />
-      <CollectionList collectionRef={collectionRef} queries={queries} />
-      <CollectionFooter
-        isLoadable={isLoadable}
-        isPreviousData={isPreviousData}
-        isFetching={isFetching}
-        setPage={setPage}
-      />
+      <CollectionList queries={queries} />
+      {/* <Suspense fallback={<EmptyScreen text="Loading..." />}>
+        <Await
+          resolve={jobs}
+          errorElement={<div>Could not load some data 😬</div>}
+        >
+          <CollectionList queries={queries} />
+        </Await>
+      </Suspense> */}
     </section>
   );
 };
+
+export default Home;

@@ -9,10 +9,10 @@ const instance = axios.create({
   timeout: 5000,
 });
 
-export const getJobs = async (records: number) => {
+export const getJobs = async () => {
   const response = await instance.get("/");
   const { record } = response.data;
-  return record.slice(0, records);
+  return record;
 };
 
 export const getJob = async (id: string | undefined) => {
