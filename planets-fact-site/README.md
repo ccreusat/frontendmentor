@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Solution page](https://www.frontendmentor.io/solutions/planets-fact-using-reactjs-eafGeElf9)
--   Live Site URL: [Live site](https://ccreusat-planets-fact.vercel.app/)
+-   Live Site URL: [Live site](https://ccreusat-planets-fact-site.netlify.app/)
 
 ## My process
 
