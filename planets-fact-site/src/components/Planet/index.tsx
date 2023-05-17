@@ -21,8 +21,9 @@ import {
   PlanetFooterText,
 } from "./Planet";
 
-import Helpers from "../../utils/helpers";
+import Helpers, { HelpType } from "../../utils/helpers";
 import { tabs } from "../../data/tabs";
+
 import { PlanetProps } from "../Header";
 
 export interface TabProps<T> {
@@ -32,6 +33,8 @@ export interface TabProps<T> {
   mobile: T;
 }
 
+type CurrentTabProps = "overview" | "geology" | "structure";
+
 export const Planet = ({
   currentPlanet,
   resetTab,
@@ -39,7 +42,7 @@ export const Planet = ({
   currentPlanet: PlanetProps;
   resetTab: number;
 }) => {
-  const [isMobile, setIsMobile] = useState();
+  const [isMobile, setIsMobile] = useState<HelpType>();
 
   useEffect(() => {
     setIsMobile(Helpers.detectDeviceType());
@@ -93,11 +96,13 @@ export const Planet = ({
         <PlanetInfo>
           <PlanetInfoWrapper>
             <PlanetTitle>{currentPlanet.name}</PlanetTitle>
-            <PlanetText>{currentPlanet[currentTab].content}</PlanetText>
+            <PlanetText>
+              {currentPlanet[currentTab as CurrentTabProps].content}
+            </PlanetText>
             <PlanetWiki>
               Source : {""}
               <PlanetWikiLink
-                href={currentPlanet[currentTab].source}
+                href={currentPlanet[currentTab as CurrentTabProps].source}
                 target="_blank"
               >
                 Wikipedia
